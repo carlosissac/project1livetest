@@ -32,7 +32,9 @@ let apiHandler = {
         //website URL 
         //let queryURL = `https://us-zipcode.api.smartystreets.com/lookup?key=${keyS}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
         //let queryURL = `https://us-zipcode.api.smartystreets.com/street-address?key=${keyS}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
-        let queryURL = `https://us-street.api.smartystreets.com/street-address?street=123+main+Schenectady+NY&key=3738001108134117`;
+        //let queryURL = `https://us-street.api.smartystreets.com/street-address?street=123+main+Schenectady+NY&key=3738001108134117`;
+        let queryURL = `https://us-street.api.smartystreets.com/street-address?candidates=1&match=invalid&street=${encodeURIComponent(add1)}&street2=${encodeURIComponent(add2)}&city=${encodeURIComponent(city)}&state=${encodeURIComponent(state)}&zipcode=${encodeURIComponent(zip)}&key=3738001108134117`;
+
 
         //console.log(keyS);
         console.log(queryURL);
