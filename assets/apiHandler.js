@@ -19,7 +19,7 @@ let apiHandler = {
     },
 
     async addressResolve() {
-        let key = this.keySmarty;
+        let keyS = this.keySmarty;
         let add1 = JSON.parse(localStorage.getItem("add1"));
         let add2 = JSON.parse(localStorage.getItem("add2"));
         let city = JSON.parse(localStorage.getItem("city"));
@@ -31,7 +31,10 @@ let apiHandler = {
 
         //website URL 
         //https://us-zipcode.api.smartystreets.com/lookup?key=3550738597428721952&city=mountain+view&state=CA&zipcode=94035"
-        let queryURL = `https://us-zipcode.api.smartystreets.com/lookup?key=${key}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
+        let queryURL = `https://us-zipcode.api.smartystreets.com/lookup?key=${keyS}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
+
+        console.log(keyS);
+        console.log(queryURL);
 
         let promise = await Promise.all([
             $.ajax({
