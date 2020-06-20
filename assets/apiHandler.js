@@ -5,6 +5,7 @@ let apiHandler = {
     localAPIResp : "", 
     stateAPIResp : "",
     federalAPIResp : "",
+    keySmarty : "",
     appIDSmarty : "",
     authTokenSmarty : "",
     appIDGoogle : "",
