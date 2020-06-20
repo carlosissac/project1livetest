@@ -43,6 +43,8 @@ let apiHandler = {
             })
         ]);
 
+        console.log(promise);
+
         this.du.parseAddress(promise);
         this.du.displayResolvedAddress();
         
