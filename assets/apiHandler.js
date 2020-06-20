@@ -11,26 +11,26 @@ let apiHandler = {
     du : dynamicUi, 
 
     loadApiKeys: function () {
+        this.keySmarty = `3738002311133667`;
         this.appIDSmarty = JSON.parse(localStorage.getItem("appIDSmartyStreets"));
         this.authTokenSmarty = JSON.parse(localStorage.getItem("authTokenSmartyStreets"));
         this.appKeyGoogle = JSON.parse(localStorage.getItem("appKeyGoogle"));
     },
 
     async addressResolve() {
+        let key = this.keySmarty;
         let add1 = JSON.parse(localStorage.getItem("add1"));
         let add2 = JSON.parse(localStorage.getItem("add2"));
         let city = JSON.parse(localStorage.getItem("city"));
         let state = JSON.parse(localStorage.getItem("state"));
         let zip = JSON.parse(localStorage.getItem("zip"));
 
-        //Host side URL 
-        let queryURL_Host = `https://us-street.api.smartystreets.com/street-address?auth-id=${this.appIDSmarty}&auth-token=${this.authTokenSmarty}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
+        //Host URL 
+        //let queryURL = `https://us-street.api.smartystreets.com/street-address?auth-id=${this.appIDSmarty}&auth-token=${this.authTokenSmarty}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
 
         //website URL 
-        https://us-street.api.smartystreets.com/street-address?street=123+main+Schenectady+NY&key=4236410529599436
-        let queryURL_Website = `https://us-street.api.smartystreets.com/street-address?street=&key=`;
-
-
+        //https://us-zipcode.api.smartystreets.com/lookup?key=3550738597428721952&city=mountain+view&state=CA&zipcode=94035"
+        let queryURL = `https://us-zipcode.api.smartystreets.com/lookup?key=${key}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
 
         let promise = await Promise.all([
             $.ajax({
