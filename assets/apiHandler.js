@@ -26,6 +26,8 @@ let apiHandler = {
         let state = JSON.parse(localStorage.getItem("state"));
         let zip = JSON.parse(localStorage.getItem("zip"));
 
+        console.log("LIIIIIVE TEST 11");
+
         //Host URL 
         //let queryURL = `https://us-street.api.smartystreets.com/street-address?auth-id=${this.appIDSmarty}&auth-token=${this.authTokenSmarty}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
 
@@ -37,8 +39,6 @@ let apiHandler = {
                 method: "GET"
             })
         ]);
-
-        console.log(promise);
 
         this.du.parseAddress(promise);
         this.du.displayResolvedAddress();
