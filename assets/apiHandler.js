@@ -12,7 +12,7 @@ let apiHandler = {
     du : dynamicUi, 
 
     loadApiKeys: function () {
-        this.keySmarty = `3738002311133667`;
+        this.keySmarty = `3738003473505566`;
         this.appIDSmarty = JSON.parse(localStorage.getItem("appIDSmartyStreets"));
         this.authTokenSmarty = JSON.parse(localStorage.getItem("authTokenSmartyStreets"));
         this.appKeyGoogle = JSON.parse(localStorage.getItem("appKeyGoogle"));
