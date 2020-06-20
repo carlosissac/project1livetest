@@ -26,12 +26,12 @@ let apiHandler = {
         let state = JSON.parse(localStorage.getItem("state"));
         let zip = JSON.parse(localStorage.getItem("zip"));
 
-        console.log("LIIIIIVE TEST 11");
+        console.log("LIIIIIVE TEST 12");
 
         //Host URL 
         //let queryURL = `https://us-street.api.smartystreets.com/street-address?auth-id=${this.appIDSmarty}&auth-token=${this.authTokenSmarty}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
 
-        let queryURL = `https://us-street.api.smartystreets.com/street-address?candidates=1&match=invalid&street=${encodeURIComponent(add1)}&street2=${encodeURIComponent(add2)}&city=${encodeURIComponent(city)}&state=${encodeURIComponent(state)}&zipcode=${encodeURIComponent(zip)}&key=${encodeURIComponent(keySmarty)}`;
+        let queryURL = `https://us-street.api.smartystreets.com/street-address?candidates=1&match=invalid&street=${encodeURIComponent(add1)}&street2=${encodeURIComponent(add2)}&city=${encodeURIComponent(city)}&state=${encodeURIComponent(state)}&zipcode=${encodeURIComponent(zip)}&key=${encodeURIComponent(keyS)}`;
 
         let promise = await Promise.all([
             $.ajax({
