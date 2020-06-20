@@ -27,12 +27,12 @@ let apiHandler = {
         let zip = JSON.parse(localStorage.getItem("zip"));
 
         //Host URL 
-        let queryURL = `https://us-street.api.smartystreets.com/street-address?auth-id=${this.appIDSmarty}&auth-token=${this.authTokenSmarty}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
+        //let queryURL = `https://us-street.api.smartystreets.com/street-address?auth-id=${this.appIDSmarty}&auth-token=${this.authTokenSmarty}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
 
         //website URL 
-        //https://us-zipcode.api.smartystreets.com/lookup?key=3550738597428721952&city=mountain+view&state=CA&zipcode=94035"
         //let queryURL = `https://us-zipcode.api.smartystreets.com/lookup?key=${keyS}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
         //let queryURL = `https://us-zipcode.api.smartystreets.com/street-address?key=${keyS}&candidates=1&match=invalid&street=${add1}&street2=${add2}&city=${city}&state=${state}&zipcode=${zip}`;
+        let queryURL = `https://us-street.api.smartystreets.com/street-address?street=123+main+Schenectady+NY&key=3738001108134117`;
 
         //console.log(keyS);
         console.log(queryURL);
